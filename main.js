@@ -35,6 +35,14 @@ function getData() {
         link.href = `https://github.com/${inputData.value}/${repo.name}`;
         // Add link to mainDiv
         mainDiv.appendChild(link);
+        // Create stars span
+        let starsSpan = document.createElement("span");
+        // Create text for span
+        let starsSpanText = document.createTextNode(`Stars count is : ${stargazer_count}`);
+        // Add text to span
+        starsSpan.appendChild(starsSpanText);
+        // Add stars to mainDiv
+        mainDiv.appendChild(starsSpan);
         });
         
      });
